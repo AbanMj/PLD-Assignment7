@@ -6,9 +6,12 @@
 sentence =input("What do you want to say to me?(2 sentences): \n     ")
 vowels=0
 consonants=0
+words = 1
 
 for i in sentence:
-    if(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' or
+    if i == ' ' :
+        words = words + 1 
+    elif(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' or
        i == 'A'or i == 'E'or i == 'I'or i == 'O'or i == 'U' ):
            vowels=vowels+1
     elif (i == 'b' or i == 'c' or i == 'd' or i == 'f' or i == 'g' or i == 'h' or i == 'j' or i == 'k' or i == 'l' or 
@@ -18,6 +21,7 @@ for i in sentence:
         i == 'M' or i == 'N' or i == 'P' or i == 'Q' or i == 'R' or i == 'S' or i == 'T' or i == 'V' or i == 'W' or 
         i == 'X' or i == 'Y' or i == 'Z'):
             consonants=consonants+1
-
+            
+print(f"Words: \n     The sentences have {words} words.")
 print(f"Vowels: \n     The sentences have {vowels} vowels.")
 print(f"Consonants: \n     The sentences have {consonants} consonants.")
