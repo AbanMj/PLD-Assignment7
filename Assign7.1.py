@@ -3,10 +3,11 @@
 #Display the number of words, vowels and consonants in the input 
 #input: Bahala kayo dyan, #output:, #words: 3, #vowels: 6, #consonants: 
 
-sentence =input("What do you want to say to me?(2 sentences): \n     ")
+sentence =input("What do you want to say to me?(minimum of 2 sentences): \n     ")
+
+words = 1
 vowels=0
 consonants=0
-words = 1
 
 for i in sentence:
     if i == ' ' :
@@ -21,7 +22,8 @@ for i in sentence:
         i == 'M' or i == 'N' or i == 'P' or i == 'Q' or i == 'R' or i == 'S' or i == 'T' or i == 'V' or i == 'W' or 
         i == 'X' or i == 'Y' or i == 'Z'):
             consonants=consonants+1
-            
+
+print(f"\nMessage for me: \n     {sentence}")           
 print(f"Words: \n     The sentences have {words} words.")
 print(f"Vowels: \n     The sentences have {vowels} vowels.")
 print(f"Consonants: \n     The sentences have {consonants} consonants.")
