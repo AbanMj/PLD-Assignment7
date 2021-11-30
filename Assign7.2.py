@@ -6,24 +6,28 @@
 #d. Have at least one special char (!@#$%^&*()_+ etc)
 #ex. input: P@ssw0rd+P@ssw0rd, ouput: Valid
 
+psswrd = input("Enter password: \n    ")
+lower=0
+capital=0
+numb=0
+special=0
 
-password = input("enter password: \n    ")
+if len(psswrd)>15:
+    for char in psswrd:
+        if (char.islower()):
+            lower=lower+1
 
-lower = 0
-capital = 0
-number = 0
-if (len(password) >15 ):
-    for i in password:
-        if (i.islower()):
-            lower+=1 
-        if (i.isupper()):
-            capital+=1
-        if (i.isdigit()):
-            number+=1
+        if (char.isupper()):
+            capital=capital+1
 
-if (lower >=1 and 
-    capital >= 1 and 
-    number >=1 ):
-    print ("valid")
+        if (char.isdigit()):
+            numb=numb+1
+
+        if (char=='$'or char=='@' or char=='#' or char=='%' or char=='!' or char=='#' or char=='&'
+        or char=='*' or char=='-' or char=='_' or char==' ' or char==',' or char=='.'):
+            special=special+1
+
+if (lower>=1 and capital>=1 and numb>=1 and special>=1 and lower+capital+numb+special==len(psswrd)):
+    print("    -Valid Password")
 else:
-    print("invalid")
+    print("    -Invalid Password")
