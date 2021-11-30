@@ -10,11 +10,15 @@
 password = input("enter password: \n    ")
 
 lower = 0
+capital = 0
 if (len(password) >15 ):
     for i in password:
         if (i.islower()):
             lower+=1 
+        if (i.isupper()):
+            capital+=1
 
+if (lower>=15 and capital >= 1):
     print ("valid")
 else:
     print("invalid")
